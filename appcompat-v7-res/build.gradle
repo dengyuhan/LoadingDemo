@@ -1,0 +1,16 @@
+apply plugin: 'com.android.library'
+apply from: "bintray.gradle"
+android{
+    sourceSets {
+        main {
+            res.srcDirs = [
+                    'src/main/res',
+                    'src/main/res-appcompat-v7-26.1.0',
+                    'src/main/res-support-compat-26.1.0',
+                    'src/main/res-support-media-compat-26.1.0'
+            ]
+        }
+    }
+}
+dependencies {
+}

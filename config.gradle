@@ -18,27 +18,28 @@ ext {
     jcenter =
             [
                     //项目名称
-                    name       : "appcompat-v7-jar",
-                    groupId    : "com.dyhdyh.android.support",
+                    name                 : "appcompat-v7-jar",
+                    name_appcompat_v7_res: "appcompat-v7-res",
+                    groupId              : "com.dyhdyh.android.support",
                     //项目地址
-                    siteUrl    : "https://github.com/dengyuhan/android-support-jar",
+                    siteUrl              : "https://github.com/dengyuhan/android-support-jar",
                     //项目git地址
-                    gitUrl     : "https://github.com/dengyuhan/android-support-jar.git",
+                    gitUrl               : "https://github.com/dengyuhan/android-support-jar.git",
                     //项目描述
-                    description: "android support for jar",
+                    description          : "android support for jar",
                     //开发者的一些基本信息
-                    authorId   : "dengyuhan",
-                    authorName : "dengyuhan",
-                    authorEmail: "22309946@qq.com",
+                    authorId             : "dengyuhan",
+                    authorName           : "dengyuhan",
+                    authorEmail          : "22309946@qq.com",
 
                     //开源协议
-                    licenses   : {
+                    licenses             : {
                         license {
                             name 'MIT'
                             url 'https://opensource.org/licenses/MIT'
                         }
                     },
-                    licenseName: 'MIT'
+                    licenseName          : 'MIT'
             ]
 
 

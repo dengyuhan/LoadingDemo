@@ -1,1 +1,1 @@
-include ':app', ':appcompat-v7-jar'
+include ':app', ':appcompat-v7-jar', ':appcompat-v7-res'
