@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+}
+
+task makeJar(type: Jar, dependsOn: ['build']) {
+    destinationDir = file('build/outputs/jar/')
+    baseName = "$rootProject.ext.jcenter.name"
+    version = "$rootProject.ext.android.versionName"
+    from(project.zipTree("libs/com.android.support:animated-vector-drawable-26.1.0.jar"))
+    from(project.zipTree("libs/com.android.support:appcompat-v7-26.1.0.jar"))
+    from(project.zipTree("libs/com.android.support:support-annotations:26.1.0.jar"))
+    from(project.zipTree("libs/com.android.support:support-compat-26.1.0.jar"))
+    from(project.zipTree("libs/com.android.support:support-core-ui-26.1.0.jar"))
+    from(project.zipTree("libs/com.android.support:support-core-utils-26.1.0.jar"))
+    from(project.zipTree("libs/com.android.support:support-fragment-26.1.0.jar"))
+    from(project.zipTree("libs/com.android.support:support-media-compat-26.1.0.jar"))
+    from(project.zipTree("libs/com.android.support:support-vector-drawable-26.1.0.jar"))
+    exclude('**/BuildConfig.class')
+    exclude('**/BuildConfig\$*.class')
+    exclude('**/R.class')
+    exclude('**/R\$*.class')
+    include('**/*.class')
+}

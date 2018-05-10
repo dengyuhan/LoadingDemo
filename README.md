@@ -1,2 +1,15 @@
 # android-support-jar
-将Android扩展库抽取成jar，用于精简RePlugin的插件
+
+### gralde引入
+这样引入只会引入java类，不会引用资源
+
+```
+implementation 'com.dyhdyh.android.support:appcompat-v7-jar:26.1.0-beta'
+```
+
+### RePlugin插件引入appcompat
+在插件程序以`compileOnly`引入 
+
+```
+compileOnly 'com.dyhdyh.android.support:appcompat-v7-jar:26.1.0-beta'
+```
