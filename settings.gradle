@@ -1,1 +1,1 @@
-include ':app', ':appcompat-v7-jar'
+include ':app', ':AVLoadingIndicatorView', ':SpinKit'
